@@ -57,6 +57,7 @@ public class BouquetRs {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void postBouquet(Bouquet f) {
 		try {
+			System.out.println("Le bouquet "+ f );
 			bouquetManager.ajoutBouquet(f);
 		} catch (Exception e) {
 			throw new WebApplicationException(Response.Status.CONFLICT);

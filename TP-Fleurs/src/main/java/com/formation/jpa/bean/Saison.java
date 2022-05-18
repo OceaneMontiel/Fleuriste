@@ -16,8 +16,7 @@ public class Saison {
 	public Saison() {
 	}
 	
-	public Saison(int id, String nom) {
-		this.id = id;
+	public Saison(String nom) {
 		this.nom = nom;
 	}
 

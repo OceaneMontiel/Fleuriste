@@ -14,7 +14,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/commun.css">
-<script src="./js/films.js"></script>
+<script src="./js/gestion_bouquets.js"></script>
 
 <style>
 	.green{
@@ -99,21 +99,21 @@
 				<div class="form-group">			
 					<label for="nom" class="col-xs-2 control-label">Nom :</label>
 					<div class="col-xs-10">
-						<input id="nom"  name="nom"  placeholder="Nom..."  class="form-control" /> 
+						<input id="nomBouquet"  name="nomBouquet"  placeholder="Nom..."  class="form-control" /> 
 					</div>
 				</div>
 
 				<div class="form-group">			
 					<label for="nom" class="col-xs-2 control-label">Tarif :</label>
 					<div class="col-xs-10">
-						<input id="tarif" name="tarif" type="number"  class="form-control" />	 
+						<input id="tarifBouquet" name="tarifBouquet" type="number"  class="form-control" />	 
 					</div>
 				</div>
 
 				<div class="form-group">			
 					<label for="quantite" class="col-xs-2 control-label">Quantité :</label>
 					<div class="col-xs-10">
-						<input id="quantite" name="quantite" type="number"  class="form-control" />					
+						<input id="quantiteBouquet" name="quantiteBouquet" type="number"  class="form-control" />					
 					</div>
 				</div>
 				
@@ -122,7 +122,7 @@
 				<div class="form-group">			
 					<label for="Informations" class="col-xs-2 control-label">Informations :</label>
 					<div class="col-xs-10">
-						<textarea  id="informations" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
+						<textarea  id="infosBouquet" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
 					</div>
 				</div>
 				
@@ -130,21 +130,21 @@
 				<div class="form-group">			
 					<label for="image" class="col-xs-2 control-label">Image :</label>
 					<div class="col-xs-10">
-						<input id="image" name="image" type="url" placeholder="Url de l'image..." class="form-control" />					
+						<input id="imageBouquet" name="imageBouquet" type="url" placeholder="Url de l'image..." class="form-control" />					
 					</div>
 				</div>
 				
 				<div class="form-group">			
 					<label for="couleur" class="col-xs-2 control-label">Couleur :</label>
 					<div class="col-xs-10">
-						<input id="couleur"  name="couleur"  placeholder="Couleur dominante..."  class="form-control" /> 
+						<input id="couleurBouquet"  name="couleurBouquet"  placeholder="Couleur dominante..."  class="form-control" /> 
 					</div>
 				</div>
 				
 				<div class="form-group">			
 					<label for="saison" class="col-xs-2 control-label">Saison :</label>
 					<div class="col-xs-10">
-						<select id="saison" class="form-control">
+						<select id="saisonBouquet" class="form-control">
 							
 						</select>					
 					</div>
@@ -153,7 +153,7 @@
 				<div class="form-group">			
 					<label for="style" class="col-xs-2 control-label">Style :</label>
 					<div class="col-xs-10">
-						<select id="style" class="form-control">
+						<select id="styleBouquet" class="form-control">
 							
 						</select>					
 					</div>
@@ -161,7 +161,7 @@
 
 				<div class="form-group" >
 					<div class="col-xs-offset-2 col-xs-10">
-						<button id="bEnvoyer" type="button" class="btn btn-success">Ajouter !</button>			
+						<button id="bAjoutBouquet" type="button" class="btn btn-success">Ajouter !</button>			
 					</div>
 				</div>	
 			

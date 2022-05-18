@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Liste des fleurs</title>
+<title>Modification plante</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -12,16 +14,12 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/commun.css">
-<script src="./js/gestion_fleurs.js"></script>
-
+<script src="./js/modif_plantes.js"></script>
 <style>
 	.green{
 		color: green;
 	}
-	
-	
 </style>
-
 </head>
 <body>
 
@@ -65,7 +63,7 @@
 	</nav>
 
 	<div class="container">
-		<h1 class="vert">LISTE DES FLEURS : (<span id="nbFleurs"></span>)</h1>
+		<h1 class="vert">LISTE DES PLANTES (<span id="nbPlantes"></span>)</h1>
 		
 			
 		<table class="table table-hover table-striped">
@@ -75,7 +73,6 @@
 					<th>Nom </th>
 					<th>Tarif</th>
 					<th>Quantité</th>
-					<th>Saison </th>
 					<th>&nbsp;</th>
 					<th>&nbsp;</th>
 				</tr>
@@ -87,84 +84,16 @@
 	
 	</div>
 	
+	
 	<div class="container">
-		<h1 class="vert">NOUVELLE FLEUR : </h1>
-		
-			<div class="alert alert-info" id="errorFilm">
-		</div>
-		<br><br>
-		<div>
-	<form class="form-horizontal">
-				<div class="form-group">			
-					<label for="nom" class="col-xs-2 control-label">Nom :</label>
-					<div class="col-xs-10">
-						<input id="nomFleur"  name="nomFleur"  placeholder="Nom..."  class="form-control" /> 
-					</div>
-				</div>
-
-				<div class="form-group">			
-					<label for="nom" class="col-xs-2 control-label">Tarif :</label>
-					<div class="col-xs-10">
-						<input id="tarifFleur" name="tarifFleur" type="number"  class="form-control" />	 
-					</div>
-				</div>
-
-				<div class="form-group">			
-					<label for="quantite" class="col-xs-2 control-label">Quantité :</label>
-					<div class="col-xs-10">
-						<input id="quantiteFleur" name="quantiteFleur" type="number"  class="form-control" />					
-					</div>
-				</div>
-				
-				
-
-				<div class="form-group">			
-					<label for="Informations" class="col-xs-2 control-label">Informations :</label>
-					<div class="col-xs-10">
-						<textarea  id="informations" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
-					</div>
-				</div>
-				
-				
-				<div class="form-group">			
-					<label for="image" class="col-xs-2 control-label">Image :</label>
-					<div class="col-xs-10">
-						<input id="image" name="image" type="url" placeholder="Url de l'image..." class="form-control" />					
-					</div>
-				</div>
-				
-				<div class="form-group">			
-					<label for="couleur" class="col-xs-2 control-label">Couleur :</label>
-					<div class="col-xs-10">
-						<input id="couleur"  name="couleur"  placeholder="Couleur dominante..."  class="form-control" /> 
-					</div>
-				</div>
-				
-				<div class="form-group">			
-					<label for="saison" class="col-xs-2 control-label">Saison :</label>
-					<div class="col-xs-10">
-						<select id="saisonFleur" class="form-control">
-							
-						</select>					
-					</div>
-				</div>
-				
-
-				<div class="form-group" >
-					<div class="col-xs-offset-2 col-xs-10">
-						<button id="bAjoutFleur" type="button" class="btn btn-success">Ajouter !</button>			
-					</div>
-				</div>	
-			
-	</form>
-	</div>
+		<h1>Modification de la plante : </h1>
 	</div>
 
 	<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container">
 			<ul class="nav navbar-nav  navbar-foot">
 				<li class="pull-left"><a>© 2022 Copyright</a></li>
-				<li class="pull-right"><a>Océane Montiel</a></li>
+				<li class="pull-right"><a>Formation M2i</a></li>
 			</ul>
 		</div>
 	</nav>

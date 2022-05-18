@@ -22,7 +22,7 @@ public class Bouquet {
 	private URL image;
 	private String couleur;
 	
-	@ManyToOne
+	@ManyToOne 
 	private Saison saison;
 	@ManyToOne
 	private Style style;
@@ -33,9 +33,8 @@ public class Bouquet {
 		
 	}
 	
-	public Bouquet(int id, String nom, float tarif, int quantite, String informations, URL image, String couleur,
+	public Bouquet(String nom, float tarif, int quantite, String informations, URL image, String couleur,
 			Saison saison, Style style) {
-		this.id = id;
 		this.nom = nom;
 		this.tarif = tarif;
 		this.quantite = quantite;

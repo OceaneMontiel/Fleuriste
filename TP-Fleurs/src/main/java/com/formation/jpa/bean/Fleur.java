@@ -23,8 +23,6 @@ public class Fleur {
 	
 	@ManyToOne
 	private Saison saison;
-	@ManyToOne
-	private Style style;
 	
 	
 	public Fleur() {
@@ -32,7 +30,7 @@ public class Fleur {
 	}
 	
 	public Fleur(int id, String nom, float tarif, int quantite, String informations, URL image, String couleur,
-			Saison saison, Style style) {
+			Saison saison) {
 		this.id = id;
 		this.nom = nom;
 		this.tarif = tarif;
@@ -41,7 +39,6 @@ public class Fleur {
 		this.image = image;
 		this.couleur = couleur;
 		this.saison = saison;
-		this.style = style;
 	}
 
 
@@ -142,23 +139,13 @@ public class Fleur {
 
 
 
-	public Style getStyle() {
-		return style;
-	}
-
-
-
-	public void setStyle(Style style) {
-		this.style = style;
-	}
 
 
 
 	@Override
 	public String toString() {
 		return "Fleur [id=" + id + ", nom=" + nom + ", tarif=" + tarif + ", quantite=" + quantite + ", informations="
-				+ informations + ", image=" + image + ", couleur=" + couleur + ", saison=" + saison + ", style=" + style
-				+ "]";
+				+ informations + ", image=" + image + ", couleur=" + couleur + ", saison=" + saison + "]";
 	}
 	
 	
