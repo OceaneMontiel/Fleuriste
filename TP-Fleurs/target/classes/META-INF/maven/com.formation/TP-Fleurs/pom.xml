@@ -28,6 +28,14 @@
 			<version>2.1.212</version>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.webjars/font-awesome -->
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>font-awesome</artifactId>
+		    <version>6.1.0</version>
+		</dependency>
+
+		
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>

@@ -18,15 +18,19 @@ import javax.ws.rs.core.Response;
 import com.formation.jpa.bean.Bouquet;
 import com.formation.jpa.bll.BouquetManager;
 
+
 @Path("/bouquets")
 @Singleton
 public class BouquetRs {
 	
+	
 	private BouquetManager bouquetManager;
+	
 	
 	public BouquetRs() {
 		bouquetManager = new BouquetManager();
 	}
+	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,7 +39,6 @@ public class BouquetRs {
 	}
 	
 
-	
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -52,7 +55,6 @@ public class BouquetRs {
 	}
 	
 	
-
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void postBouquet(Bouquet f) {
@@ -74,6 +76,7 @@ public class BouquetRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
+	
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)

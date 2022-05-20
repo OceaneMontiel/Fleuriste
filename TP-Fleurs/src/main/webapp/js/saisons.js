@@ -6,9 +6,10 @@ $(function() {
 
 
 function getSaisons() {
-	$("#errorStyle").css("display", "none");
+	$("#errorSaison").css("display", "none");
 	$.get("http://localhost:8080/TP-Fleurs/rs/saisons", afficherSaisons);
 }
+
 
 
 function ajouterSaison() {
@@ -32,6 +33,7 @@ function ajouterSaison() {
 	})
 
 }
+
 
 
 function afficherSaisons(saisons) {
@@ -61,8 +63,8 @@ function suppSaison(id){
 		}
 	})
 	.fail(function(){
-		$("#errorStyle").css("display", "block");
-		$("#errorStyle").html("Une erreur est survenue lors de la suppression");
+		$("#errorSaison").css("display", "block");
+		$("#errorSaison").html("Une erreur est survenue lors de la suppression");
 	})
 }
 
@@ -73,8 +75,6 @@ function modifSaison(id){
 	var data = {
 		nom: $("#nomSaison" + id).val(),
 	}
-	
-
 	$.ajax({
 		type : 'put',
 		url : 'http://localhost:8080/TP-Fleurs/rs/saisons/'+id,
@@ -86,8 +86,8 @@ function modifSaison(id){
 	})
 	.fail(function(){
 		getSaisons();
-		$("#errorStyle").css("display", "block");
-		$("#errorStyle").html("Une erreur est survenue lors de la modification");
+		$("#errorSaison").css("display", "block");
+		$("#errorSaison").html("Une erreur est survenue lors de la modification");
 	})
 	
 }

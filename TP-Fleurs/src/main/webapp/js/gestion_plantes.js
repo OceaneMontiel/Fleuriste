@@ -9,6 +9,8 @@ function getPlantes() {
 	$.get("http://localhost:8080/TP-Fleurs/rs/plantes", afficherPlantes);
 }
 
+
+
 function ajouterPlante() {
 
 	var data = {
@@ -33,16 +35,18 @@ function ajouterPlante() {
 		}
 	})
 	.fail(function() {
-		$("#errorStyle").css("display", "block");
-		$("#errorStyle").html("Une erreur est survenue lors de l'ajout");
+		$("#errorPlante").css("display", "block");
+		$("#errorPlante").html("Une erreur est survenue lors de l'ajout");
 	})
-
 }
 
 
+
 function afficherPlantes(plantes) {
+	
 	var data = "";
 	$("#nbPlantes").html(plantes.length);
+	
 	plantes.forEach(function(f) {
 		var tr = "<tr>";
 		tr += "<td>" + f.id + "</td>";
@@ -60,14 +64,17 @@ function afficherPlantes(plantes) {
 	$("#tbodyliste").html(data);
 }
 
+
+
 function affichePlante(id){
 	window.location = "gestion_plantes.html?id=" + id;
 }
 
+
+
 function modifPlante(id){
 	window.location = "modif_plantes.html?id=" + id;
 }
-
 
 
 
@@ -80,7 +87,7 @@ function suppPlante(id){
 		}
 	})
 	.fail(function(){
-		$("#errorFilm").css("display", "block");
-		$("#errorFilm").html("Une erreur est survenue lors de la suppression");
+		$("#errorPlante").css("display", "block");
+		$("#errorPlante").html("Une erreur est survenue lors de la suppression");
 	})
 }

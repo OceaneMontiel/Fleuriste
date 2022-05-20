@@ -20,6 +20,21 @@
 	.green{
 		color: green;
 	}
+	
+	a.dropdown-item {     
+		color: grey;     
+		text-decoration: none;     
+		width:100%;     
+		margin: 2% auto; 
+	}
+	  
+	.open > .dropdown-menu  {     
+		display: flex;     
+		flex-wrap: wrap;     
+		flex-direction: column;     
+		text-align: center;     
+		letter-spacing: 2px; 
+	}
 </style>
 
 </head>
@@ -65,7 +80,7 @@
 	</nav>
 
 	<div class="container">
-		<h1 class="vert">LISTE DES BOUQUETS  (<span id="nbBouquets"></span>) </h1>
+		<h1 class="text-warning">LISTE DES BOUQUETS  (<span id="nbBouquets"></span>) </h1>
 		
 			
 		<table class="table table-hover table-striped">
@@ -89,91 +104,91 @@
 	</div>
 	
 	<div class="container">
-		<h1 class="vert">NOUVEAU BOUQUET : </h1>
+		<h1 class="text-warning">NOUVEAU BOUQUET : </h1>
 		
-			<div class="alert alert-info" id="errorFilm">
-		</div>
-		<br><br>
-		<div>
-	<form class="form-horizontal">
-				<div class="form-group">			
-					<label for="nom" class="col-xs-2 control-label">Nom :</label>
-					<div class="col-xs-10">
-						<input id="nomBouquet"  name="nomBouquet"  placeholder="Nom..."  class="form-control" /> 
-					</div>
-				</div>
-
-				<div class="form-group">			
-					<label for="nom" class="col-xs-2 control-label">Tarif :</label>
-					<div class="col-xs-10">
-						<input id="tarifBouquet" name="tarifBouquet" type="number"  class="form-control" />	 
-					</div>
-				</div>
-
-				<div class="form-group">			
-					<label for="quantite" class="col-xs-2 control-label">Quantité :</label>
-					<div class="col-xs-10">
-						<input id="quantiteBouquet" name="quantiteBouquet" type="number"  class="form-control" />					
-					</div>
-				</div>
-				
-				
-
-				<div class="form-group">			
-					<label for="Informations" class="col-xs-2 control-label">Informations :</label>
-					<div class="col-xs-10">
-						<textarea  id="infosBouquet" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
-					</div>
-				</div>
-				
-				
-				<div class="form-group">			
-					<label for="image" class="col-xs-2 control-label">Image :</label>
-					<div class="col-xs-10">
-						<input id="imageBouquet" name="imageBouquet" type="url" placeholder="Url de l'image..." class="form-control" />					
-					</div>
-				</div>
-				
-				<div class="form-group">			
-					<label for="couleur" class="col-xs-2 control-label">Couleur :</label>
-					<div class="col-xs-10">
-						<input id="couleurBouquet"  name="couleurBouquet"  placeholder="Couleur dominante..."  class="form-control" /> 
-					</div>
-				</div>
-				
-				<div class="form-group">			
-					<label for="saison" class="col-xs-2 control-label">Saison :</label>
-					<div class="col-xs-10">
-						<select id="saisonBouquet" class="form-control">
-							
-						</select>					
-					</div>
-				</div>
-				
-				<div class="form-group">			
-					<label for="style" class="col-xs-2 control-label">Style :</label>
-					<div class="col-xs-10">
-						<select id="styleBouquet" class="form-control">
-							
-						</select>					
-					</div>
-				</div>
-
-				<div class="form-group" >
-					<div class="col-xs-offset-2 col-xs-10">
-						<button id="bAjoutBouquet" type="button" class="btn btn-success">Ajouter !</button>			
-					</div>
-				</div>	
+			<div class="alert alert-warning" id="errorBouquet">
+			</div>
+			<br><br>
+			<div>
+				<form class="form-horizontal">
+							<div class="form-group">			
+								<label for="nom" class="col-xs-2 control-label">Nom :</label>
+								<div class="col-xs-10">
+									<input id="nomBouquet"  name="nomBouquet"  placeholder="Nom..."  class="form-control" /> 
+								</div>
+							</div>
 			
-	</form>
-	</div>
+							<div class="form-group">			
+								<label for="nom" class="col-xs-2 control-label">Tarif :</label>
+								<div class="col-xs-10">
+									<input id="tarifBouquet" name="tarifBouquet" type="number"  class="form-control" />	 
+								</div>
+							</div>
+			
+							<div class="form-group">			
+								<label for="quantite" class="col-xs-2 control-label">Quantité :</label>
+								<div class="col-xs-10">
+									<input id="quantiteBouquet" name="quantiteBouquet" type="number"  class="form-control" />					
+								</div>
+							</div>
+							
+							
+			
+							<div class="form-group">			
+								<label for="Informations" class="col-xs-2 control-label">Informations :</label>
+								<div class="col-xs-10">
+									<textarea  id="infosBouquet" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
+								</div>
+							</div>
+							
+							
+							<div class="form-group">			
+								<label for="image" class="col-xs-2 control-label">Image :</label>
+								<div class="col-xs-10">
+									<input id="imageBouquet" name="imageBouquet" type="url" placeholder="Url de l'image..." class="form-control" />					
+								</div>
+							</div>
+							
+							<div class="form-group">			
+								<label for="couleur" class="col-xs-2 control-label">Couleur :</label>
+								<div class="col-xs-10">
+									<input id="couleurBouquet"  name="couleurBouquet"  placeholder="Couleur dominante..."  class="form-control" /> 
+								</div>
+							</div>
+							
+							<div class="form-group">			
+								<label for="saison" class="col-xs-2 control-label">Saison :</label>
+								<div class="col-xs-10">
+									<select id="saisonBouquet" class="form-control">
+										
+									</select>					
+								</div>
+							</div>
+							
+							<div class="form-group">			
+								<label for="style" class="col-xs-2 control-label">Style :</label>
+								<div class="col-xs-10">
+									<select id="styleBouquet" class="form-control">
+										
+									</select>					
+								</div>
+							</div>
+			
+							<div class="form-group" >
+								<div class="col-xs-offset-2 col-xs-10">
+									<button id="bAjoutBouquet" type="button" class="btn btn-warning">Ajouter !</button>			
+								</div>
+							</div>	
+						
+					</form>
+			</div>
 	</div>
 
 	<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container">
 			<ul class="nav navbar-nav  navbar-foot">
-				<li class="pull-left"><a>© 2022 Copyright</a></li>
-				<li class="pull-right"><a>Océane Montiel</a></li>
+				<li class="pull-left"><a>© 2022 Copyleft</a></li>
+				<li class="pull-right"><a>Vert Tige</a></li>
 			</ul>
 		</div>
 	</nav>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Panier du Vert-Tige</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/commun.css">
+<script src="./js/panier.js"></script>
+<style>
+
+	.green{
+		color: #3C9405;
+	}
+
+
+	.back{
+		background-color:#D4FF89;
+	}
+	
+	
+	.miniback{
+		background-color:#3C9405;
+		color: white;
+	}
+	
+	
+	a.dropdown-item {     
+		color: grey;     
+		text-decoration: none;     
+		width:100%;     
+		margin: 2% auto; 
+	}
+	  
+	  
+	.open > .dropdown-menu  {     
+		display: flex;     
+		flex-wrap: wrap;     
+		flex-direction: column;     
+		text-align: center;     
+		letter-spacing: 2px; 
+	}
+
+
+	#content{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+	}
+	
+	
+	.card{
+		box-shadow: 1px 1px 1px grey;
+		border-color: black !important;
+		border-radius: 5%;
+		margin:2%;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		text-align:center;
+		background-color: #D1E1C3;
+		width: 28%;
+		
+	}
+
+
+	.card-title{
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-top: 3%;
+		padding-top: 2%;
+	}
+	
+	
+	.card-img-top{
+		max-width: 300px;
+		max-height: 300px;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+	
+	
+	.block{
+		margin: auto;
+	}
+	
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand active"> <span
+					class="glyphicon glyphicon-leaf green"></span> <span
+					class="glyphicon glyphicon-tree-conifer green"></span>
+				</a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse"
+					data-target="#navbar-main">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar-main">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="nosbouquets.html">Bouquets</a></li>
+					<li><a href="nosfleurs.html">Fleurs</a></li>
+					<li><a href="nosplantes.html">Plantes</a></li>
+					
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion ▾ </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="gestion_plantes.html">Plantes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="gestion_fleurs.html">Fleurs</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="gestion_bouquets.html">Bouquets</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="saisons.html">Saisons</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="styles.html">Styles</a>
+                        </div></li> 
+					
+					<li class="active"><a href="#">Panier</a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" >
+		<div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3" id ="content">
+			
+			<h1 class="text-danger">CHANTIER EN COURS</h1>			
+		
+		</div>
+		
+		<div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3" id ="content">
+			
+			<img src="https://media.istockphoto.com/photos/excavator-at-a-construction-site-against-the-setting-sun-picture-id143918313?k=20&m=143918313&s=612x612&w=0&h=CU1FT1fH9L7ElCityp4MQXMAUkcKwI7NYYJXSt4GE9g=" />
+			
+		</div>
+	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<ul class="nav navbar-nav  navbar-foot">
+				<li class="pull-left"><a>© 2022 Copyleft</a></li>
+				<li class="pull-right"><a>Vert Tige</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+</body>
+</html>

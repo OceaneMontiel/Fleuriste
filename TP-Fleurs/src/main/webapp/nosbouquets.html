@@ -13,6 +13,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/commun.css">
+<script src="./js/nosbouquets.js"></script>
 <style>
 
 	.green{
@@ -23,6 +24,12 @@
 		background-color:#D4FF89;
 	}
 	
+	.backdiv{
+		background-color:#D1E1C3;
+		border-color: #D1E1C3 !important;
+		width: auto;
+		height: auto;
+	}
 	
 	.miniback{
 		background-color:#3C9405;
@@ -30,6 +37,100 @@
 	}
 	
 	
+
+	#content{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+	}
+	
+	
+	.card{
+		box-shadow: 1px 1px 1px grey;
+		border-color: black !important;
+		border-radius: 5%;
+		margin:2%;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		text-align:center;
+		background-color: #D1E1C3;
+		width: 28%;
+		
+	}
+
+
+	.card-title{
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-top: 3%;
+		padding-top: 2%;
+	}
+	
+
+	.card-img-top{
+		max-width: 300px;
+		max-height: 300px;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+	
+	
+	.block{
+		margin: auto;
+	}
+	
+	a.dropdown-item {     
+		color: grey;     
+		text-decoration: none;     
+		width:100%;     
+		margin: 2% auto; 
+	}
+	  
+	.open > .dropdown-menu  {     
+		display: flex;     
+		flex-wrap: wrap;     
+		flex-direction: column;     
+		text-align: center;     
+		letter-spacing: 2px; 
+	}
+
+	.modal-title {
+		background-color: #D1E1C3;
+		border-radius: 5%;
+	}
+	
+
+
+	.cartediv{
+		box-shadow: 1px 1px 1px grey;
+		border-color: black !important;
+		border-radius: 5%;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		text-align:center;
+		background-color: #D1E1C3;
+	}
+	
+	
+	.modal-body{
+		display:inline-block;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	
+	
+	#plus{
+		margin-bottom: 5%;
+	}
+	
+	
+	.cartedivtitle{
+		margin-top: 2em;
+	}
 	
 </style>
 </head>
@@ -74,20 +175,26 @@
 		</div>
 	</nav>
 
-	<div class="container">
-		<h1 class="vert">NOS BOUQUETS</h1>
-		
+	<div class="container" >
+		<h1 class="text-warning">NOS BOUQUETS</h1>
+			<div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3" id ="content">
+			
+				
+			
+			</div>
+			
 	</div>
+	
+	
 
 	<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container">
 			<ul class="nav navbar-nav  navbar-foot">
-				<li class="pull-left"><a>© 2022 Copyright</a></li>
-				<li class="pull-right"><a>Océane Montiel</a></li>
+				<li class="pull-left"><a>© 2022 Copyleft</a></li>
+				<li class="pull-right"><a>Vert Tige</a></li>
 			</ul>
 		</div>
 	</nav>
-
 
 </body>
 </html>

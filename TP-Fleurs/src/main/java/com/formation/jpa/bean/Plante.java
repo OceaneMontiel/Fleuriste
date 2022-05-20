@@ -1,7 +1,5 @@
 package com.formation.jpa.bean;
 
-import java.net.URL;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,14 +15,14 @@ public class Plante {
 	private float tarif;
 	private int quantite;
 	private String informations;
-	private URL image;
+	private String image;
 	
 	
 	public Plante() {
 	}
 
 
-	public Plante(int id, String nom, float tarif, int quantite, String informations, URL image) {
+	public Plante(int id, String nom, float tarif, int quantite, String informations, String image) {
 		this.id = id;
 		this.nom = nom;
 		this.tarif = tarif;
@@ -84,12 +82,12 @@ public class Plante {
 	}
 
 
-	public URL getImage() {
+	public String getImage() {
 		return image;
 	}
 
 
-	public void setImage(URL image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 

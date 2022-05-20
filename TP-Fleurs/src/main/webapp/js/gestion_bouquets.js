@@ -11,6 +11,8 @@ function getBouquets() {
 	$.get("http://localhost:8080/TP-Fleurs/rs/bouquets", afficherBouquets);
 }
 
+
+
 function ajouterBouquet() {
 
 	var data = {
@@ -45,16 +47,18 @@ function ajouterBouquet() {
 		}
 	})
 	.fail(function() {
-		$("#errorStyle").css("display", "block");
-		$("#errorStyle").html("Une erreur est survenue lors de l'ajout");
+		$("#errorBouquet").css("display", "block");
+		$("#errorBouquet").html("Une erreur est survenue lors de l'ajout");
 	})
-
 }
 
 
+
 function afficherBouquets(bouquets) {
+	
 	var data = "";
 	$("#nbBouquets").html(bouquets.length);
+	
 	bouquets.forEach(function(f) {
 		var tr = "<tr>";
 		tr += "<td>" + f.id + "</td>";
@@ -74,14 +78,18 @@ function afficherBouquets(bouquets) {
 	$("#tbodyliste").html(data);
 }
 
+
+
 function afficheBouquet(id){
 	window.location = "gestion_bouquets.html?id=" + id;
 }
 
-function modifBouquet(id){
-	window.location = "modif.html?id=" + id;
-}
 
+
+function modifBouquet(id){
+	console.log("bouquet");
+	window.location = "modif_bouquets.html?id=" + id;
+}
 
 
 
@@ -94,13 +102,15 @@ function suppBouquet(id){
 		}
 	})
 	.fail(function(){
-		$("#errorFilm").css("display", "block");
-		$("#errorFilm").html("Une erreur est survenue lors de la suppression");
+		$("#errorBouquet").css("display", "block");
+		$("#errorBouquet").html("Une erreur est survenue lors de la suppression");
 	})
 }
 
+
+
 function getSaison() {
-        $("#errorFleur").css("display", "none");
+        $("#errorBouquet").css("display", "none");
 
     $.get("http://localhost:8080/TP-Fleurs/rs/saisons", function(saisons){
 
@@ -114,8 +124,10 @@ function getSaison() {
     });
 }
 
+
+
 function getStyle() {
-        $("#errorFleur").css("display", "none");
+        $("#errorBouquet").css("display", "none");
 
     $.get("http://localhost:8080/TP-Fleurs/rs/styles", function(styles){
 

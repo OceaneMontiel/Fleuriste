@@ -22,11 +22,14 @@ import com.formation.jpa.bll.SaisonManager;
 @Singleton
 public class SaisonRs {
 	
+	
 	private SaisonManager saisonmanager;
+	
 	
 	public SaisonRs() {
 		saisonmanager = new SaisonManager();
 	}
+	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,7 +38,6 @@ public class SaisonRs {
 	}
 	
 	
-
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void postSaison(Saison s) {
@@ -57,6 +59,7 @@ public class SaisonRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
+	
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)

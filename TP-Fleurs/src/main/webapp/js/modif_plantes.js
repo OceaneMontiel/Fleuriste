@@ -5,22 +5,31 @@ $(function() {
 		window.location = "index.html";
 	}
 	else{
-		getPlantes(id);
+		getPlante(id);
+		getPlantes();
 	}
-	
 	$("#bModifier").on ("click", envoyer);
-
 });
 
 
 
-function getPlantes(id) {
-	$.get("http://localhost:8080/TP-Fleurs/rs/plantes/" + id, afficherPlantes);
+function getPlante(id) {
+	$.get("http://localhost:8080/TP-Fleurs/rs/plantes/" + id, modifPlante);
 }
 
+
+
+function getPlantes() {
+	$.get("http://localhost:8080/TP-Fleurs/rs/plantes/", afficherPlantes);
+}
+
+
+	
 function afficherPlantes(plantes) {
+	
 	var data = "";
 	$("#nbPlantes").html(plantes.length);
+	
 	plantes.forEach(function(f) {
 		var tr = "<tr>";
 		tr += "<td>" + f.id + "</td>";
@@ -40,23 +49,16 @@ function afficherPlantes(plantes) {
 
 
 
+function modifPlante(plante) {
 
-/*
-function getStyles() {
-		$("#errorFilm").css("display", "none");
-
-	$.get("http://localhost:8080/15-tp-filmotheque/rs/styles", function(styles){
-
-		var data = "";
-		styles.forEach(function(s){
-			data += "<option value="+s.id +">" + s.libelle + "</option>";
-		});
-		
-		$("#style").html(data);
-		
-	});
+        $("#nomPlante").val(plante.nom);
+        $("#tarifPlante").val(plante.tarif);
+        $("#quantitePlante").val(plante.quantite);
+        $("#informations").val(plante.informations);
+        $("#image").val(plante.image);
+    	$("#idPlante").val(plante.id);
+    	
 }
-*/
 
 
 
@@ -68,12 +70,10 @@ function envoyer() {
 		quantite : $("#quantitePlante").val(),
 		informations: $("#informations").val(),
 		image: $("#image").val(),
-
 	}
-	
 	$.ajax({
 		type: 'put',
-		url: 'http://localhost:8080/TP-Fleurs/rs/plantes/' + $("#id").val(),
+		url: 'http://localhost:8080/TP-Fleurs/rs/plantes/' + $("#idPlante").val(),
 		data: JSON.stringify(data),
 		contentType: "application/json;charset=utf-8",
 		success: function() {
@@ -81,7 +81,7 @@ function envoyer() {
 		}
 	})
 	.fail(function() {
-		$("#errorFilm").css("display", "block");
-		$("#errorFilm").html("Une erreur est survenue lors de la modification");
+		$("#errorPlante").css("display", "block");
+		$("#errorPlante").html("Une erreur est survenue lors de la modification");
 	})
 }

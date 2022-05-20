@@ -11,6 +11,7 @@ function getStyles() {
 }
 
 
+
 function ajouterStyle() {
 
 	var data = {
@@ -32,6 +33,7 @@ function ajouterStyle() {
 	})
 
 }
+
 
 
 function afficherStyles(styles) {
@@ -73,8 +75,6 @@ function modifStyle(id){
 	var data = {
 		nom: $("#nomStyle" + id).val(),
 	}
-	
-
 	$.ajax({
 		type : 'put',
 		url : 'http://localhost:8080/TP-Fleurs/rs/styles/'+id,

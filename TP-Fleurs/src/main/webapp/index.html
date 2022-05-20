@@ -12,32 +12,103 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
 <link rel="stylesheet" href="css/commun.css">
 <style>
 
 	.green{
-		color: #3C9405;
+		color: green;
+	}
+	
+	a.dropdown-item {     
+		color: grey;     
+		text-decoration: none;     
+		width:100%;     
+		margin: 2% auto; 
+	}
+	  
+	.open > .dropdown-menu  {     
+		display: flex;     
+		flex-wrap: wrap;     
+		flex-direction: column;     
+		text-align: center;     
+		letter-spacing: 2px; 
 	}
 
+
 	.back{
-		background-color:rgb(225, 255, 176);
+		background-color:#D1E1C3;
+		box-shadow: 1px 1px 1px grey;
+		border-color: green !important;
+		border-radius: 5%;
+
 	}
 	
 
+
 	.miniback{
-		background-color:rgb(225, 255, 176);
+		background-color:#D1E1C3;
+		box-shadow: 1px 1px 1px grey;
+		border-color: green !important;
+		border-radius: 5%;
+		margin: 1%;
+		padding-top: 1%;
+		padding-bottom:4%;
+		padding-left: 3%;
+		padding-right: 3%;
     }
+    
     
     
     .ensemble{
     	display: flex;
     	justify-content: space-between;
     	flex: nowrap;
+    	
     }
     
+    
+	p{
+		margin-top: 4%;
+	}
 	
 	
 	
+	
+	.fa:hover {
+            opacity: 0.9;
+        }
+  
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+  
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+  
+        .fa-reddit {
+            background: #ff5700;
+            color: white;
+        }
+  
+        .fa {
+            padding: 20px;
+            font-size: 40px;
+            width: 60px;
+            text-decoration: none;
+            margin: 5px 80px;
+        }
+	
+	.fa-facebook {
+        background: #3b5998;
+        color: white;
+    }
 </style>
 </head>
 <body>
@@ -86,37 +157,67 @@
 			<h1>
 					Bienvenue au Vert-Tige !
 			</h1>
-			<p>
+			<p >
 				<small>Une question, un projet de livraison, un mariage, un anniversaire ? 
 						N'hésitez pas à nous contacter.</small>
 			</p>
+			
 		</div>
 		
 		<div class="ensemble">
-		<div class="jumbotron jumbotron-fluid miniback">
-			<h3>
-					Par téléphone !
+		<div class=" miniback">
+			<h3 id="title">
+					<b>PAR TÉLÉPHONE !</b>
 			</h3>
+			<p>
+			<br>
+				Du lundi au samedi de 8h00 à 19h00
+			</p>
+			<p>
+			<!-- A voir, pour le fun --><br><br>
+				<a href="javascript:PopupCentrer('popup.html',300,150,'menubar=no,status=no')">06.06.06.06.06</a>
+			</p>
 		</div>
 		
-		<div class="jumbotron jumbotron-fluid miniback">
+		<div class=" miniback">
 			<h3>
-					Par mail ou courrier !
+					<b>PAR MAIL / COURRIER !</b>
 			</h3>
+			<p>
+			<br>
+				Le Vert-Tige  <br>
+				420 rue des tifs blanches <br>
+				42 000 Aix <br><br><br>
+				
+				vert.tige@fleur.net
+			</p>
+			
 		</div>
 		
-		<div class="jumbotron jumbotron-fluid miniback">
+		<div class=" miniback">
 			<h3>
-					Sur les réseaux !
+					<b>SUR LES RÉSEAUX !</b>
 			</h3>
+			
+			<p>
+       			<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+			</p>
+			
 		</div>
-	</div></div>
+	</div>
+	</div>
+	<div class="justify-content-center" style=" text-align: center;" >
+	<div id="map-container-google-1" class="map-responsive">
+	  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87748.25435825622!2d0.30141733795758463!3d46.58460907815161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fdbe72439eb3ab%3A0x97de2319c5e09093!2s86000%20Poitiers!5e0!3m2!1sfr!2sfr!4v1652975290460!5m2!1sfr!2sfr" width="300" height="300" style="border:0;" ></iframe>
+	</div>
+</div>
+	
 
-	<nav class="navbar navbar-default navbar-fixed-bottom">
+<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container">
 			<ul class="nav navbar-nav  navbar-foot">
-				<li class="pull-left"><a>© 2022 Copyright</a></li>
-				<li class="pull-right"><a>Océane Montiel</a></li>
+				<li class="pull-left"><a>© 2022 Copyleft</a></li>
+				<li class="pull-right"><a>Vert Tige</a></li>
 			</ul>
 		</div>
 	</nav>

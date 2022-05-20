@@ -22,11 +22,14 @@ import com.formation.jpa.bll.PlanteManager;
 @Singleton
 public class PlanteRs {
 	
+	
 	private PlanteManager planteManager;
+	
 	
 	public PlanteRs() {
 		planteManager = new PlanteManager();
 	}
+	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,7 +38,6 @@ public class PlanteRs {
 	}
 	
 
-	
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -50,7 +52,6 @@ public class PlanteRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
-	
 	
 
 	@POST
@@ -73,6 +74,7 @@ public class PlanteRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
+	
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)

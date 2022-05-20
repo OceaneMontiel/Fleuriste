@@ -10,6 +10,8 @@ function getFleurs() {
 	$.get("http://localhost:8080/TP-Fleurs/rs/fleurs", afficherFleurs);
 }
 
+
+
 function ajouterFleur() {
 
 	var data = {
@@ -40,17 +42,20 @@ function ajouterFleur() {
 		}
 	})
 	.fail(function() {
-		$("#errorStyle").css("display", "block");
-		$("#errorStyle").html("Une erreur est survenue lors de l'ajout");
+		$("#errorFleur").css("display", "block");
+		$("#errorFleur").html("Une erreur est survenue lors de l'ajout");
 	})
-
 }
 
 
+
 function afficherFleurs(fleurs) {
+	
 	var data = "";
 	$("#nbFleurs").html(fleurs.length);
+	
 	fleurs.forEach(function(f) {
+		
 		var tr = "<tr>";
 		tr += "<td class='centre'>" + f.id + "</td>";
 		tr += "<td class='centre'>" + f.nom + "</td>";
@@ -68,14 +73,17 @@ function afficherFleurs(fleurs) {
 	$("#tbodyliste").html(data);
 }
 
+
+
 function afficheFleur(id){
 	window.location = "gestion_fleurs.html?id=" + id;
 }
 
-function modifFleur(id){
-	window.location = "modif.html?id=" + id;
-}
 
+
+function modifFleur(id){
+	window.location = "modif_fleurs.html?id=" + id;
+}
 
 
 
@@ -88,8 +96,8 @@ function suppFleur(id){
 		}
 	})
 	.fail(function(){
-		$("#errorFilm").css("display", "block");
-		$("#errorFilm").html("Une erreur est survenue lors de la suppression");
+		$("#errorFleur").css("display", "block");
+		$("#errorFleur").html("Une erreur est survenue lors de la suppression");
 	})
 }
 

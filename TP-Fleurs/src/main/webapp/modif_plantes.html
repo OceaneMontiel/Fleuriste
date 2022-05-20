@@ -19,6 +19,21 @@
 	.green{
 		color: green;
 	}
+	
+	a.dropdown-item {     
+		color: grey;     
+		text-decoration: none;     
+		width:100%;     
+		margin: 2% auto; 
+	}
+	  
+	.open > .dropdown-menu  {     
+		display: flex;     
+		flex-wrap: wrap;     
+		flex-direction: column;     
+		text-align: center;     
+		letter-spacing: 2px; 
+	}
 </style>
 </head>
 <body>
@@ -86,14 +101,62 @@
 	
 	
 	<div class="container">
-		<h1>Modification de la plante : </h1>
+		<h1 class="vert">MODIFICATION DE LA PLANTE : </h1>
 	</div>
+	
+	<form class="form-horizontal">
+		<input type="hidden" id="idPlante">
+				<div class="form-group">			
+					<label for="nom" class="col-xs-2 control-label">Nom :</label>
+					<div class="col-xs-10">
+						<input id="nomPlante"  name="nomPlante"  placeholder="Nom..."  class="form-control" /> 
+					</div>
+				</div>
+
+				<div class="form-group">			
+					<label for="nom" class="col-xs-2 control-label">Tarif :</label>
+					<div class="col-xs-10">
+						<input id="tarifPlante" name="tarifPlante" type="number"  class="form-control" />	 
+					</div>
+				</div>
+
+				<div class="form-group">			
+					<label for="quantite" class="col-xs-2 control-label">Quantité :</label>
+					<div class="col-xs-10">
+						<input id="quantitePlante" name="quantitePlante" type="number"  class="form-control" />					
+					</div>
+				</div>
+				
+				
+
+				<div class="form-group">			
+					<label for="Informations" class="col-xs-2 control-label">Informations :</label>
+					<div class="col-xs-10">
+						<textarea  id="informations" rows="5" placeholder="Informations ..."  class="form-control" ></textarea> 
+					</div>
+				</div>
+				
+				
+				<div class="form-group">			
+					<label for="image" class="col-xs-2 control-label">Image :</label>
+					<div class="col-xs-10">
+						<input id="image" name="image" type="url" placeholder="Url de l'image..." class="form-control" />					
+					</div>
+				</div>
+
+				<div class="form-group" >
+					<div class="col-xs-offset-2 col-xs-10">
+						<button id="bModifier" type="button" class="btn btn-success">Modifier !</button>			
+					</div>
+				</div>	
+			
+	</form>
 
 	<nav class="navbar navbar-default navbar-fixed-bottom">
 		<div class="container">
 			<ul class="nav navbar-nav  navbar-foot">
-				<li class="pull-left"><a>© 2022 Copyright</a></li>
-				<li class="pull-right"><a>Formation M2i</a></li>
+				<li class="pull-left"><a>© 2022 Copyleft</a></li>
+				<li class="pull-right"><a>Vert Tige</a></li>
 			</ul>
 		</div>
 	</nav>

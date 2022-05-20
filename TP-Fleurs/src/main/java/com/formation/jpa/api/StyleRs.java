@@ -22,11 +22,14 @@ import com.formation.jpa.bll.StyleManager;
 @Singleton
 public class StyleRs {
 	
+	
 	private StyleManager stylemanager;
+	
 	
 	public StyleRs() {
 		stylemanager = new StyleManager();
 	}
+	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,7 +38,6 @@ public class StyleRs {
 	}
 	
 	
-
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void postStyle(Style s) {
@@ -57,6 +59,7 @@ public class StyleRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
+	
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)

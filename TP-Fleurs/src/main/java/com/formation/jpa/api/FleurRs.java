@@ -22,11 +22,14 @@ import com.formation.jpa.bll.FleurManager;
 @Singleton
 public class FleurRs {
 	
+	
 	private FleurManager fleurManager;
+	
 	
 	public FleurRs() {
 		fleurManager = new FleurManager();
 	}
+	
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -34,7 +37,6 @@ public class FleurRs {
 		return fleurManager.listeFleurs();
 	}
 	
-
 	
 	@GET
 	@Path("/{id}")
@@ -73,6 +75,7 @@ public class FleurRs {
 			throw new WebApplicationException(Response.Status.CONFLICT);
 		}
 	}
+	
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)

@@ -1,3 +1,22 @@
+@media screen and (max-width: 990px){
+
+#content{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 35%;
+}
+
+.card{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 35%;
+}
+
+}
+
+
 body {
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -16,6 +35,8 @@ li > div > a:hover{
 	color:black;
 	text-decoration: none;
 }
+
+
 
 
 .rouge {
@@ -63,3 +84,6 @@ transform: scaleX(-1);
 .bottle{
 	display: inline-block !important;
 }
+
+
+
